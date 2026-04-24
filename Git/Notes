@@ -1,0 +1,12 @@
+  Git Hub
+
+Git hub is a version control system (VCS).
+
+Git hub addresses into 2 major problem
+1. sharing of code
+2. versioning
+
+version control systems are:
+|CVS } These 2 are centrolized systems
+|SVN }
+|Git } Distributed system
