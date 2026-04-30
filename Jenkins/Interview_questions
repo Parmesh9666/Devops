@@ -1,0 +1,17 @@
+Explain your current CI/CD setup? (This question can be ask in multiple ways)
+How do you handle Secrets?
+What is deployment strategy?
+What would you do if deployed app is faulty?
+Jenkins setup, Bacup and Scaling up?
+Can you explain the CICD process in your current project ? or Can you talk about any CICD process that you have implemented ?
+What are the different ways to trigger jenkins pipelines ?
+How to backup Jenkins ?
+How do you store/secure/handle secrets in Jenkins ?
+What is latest version of Jenkins or which version of Jenkins are you using ?
+What is shared modules in Jenkins ?
+can you use Jenkins to build applications with multiple programming languages using different agents in different stages ?
+How to setup auto-scaling group for Jenkins in AWS ?
+How to add a new worker node in Jenkins ?
+How to add a new plugin in Jenkins ?
+What is JNLP and why is it used in Jenkins ?
+What are some of the common plugins that you use in Jenkins ?
