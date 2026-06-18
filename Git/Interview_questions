@@ -1,11 +1,96 @@
+What is GIT?
+Git is distributed version control system used to track changes in source code and collaborate with multiple developers.
+
+Diff b/t GIT and GITHub?
+GIT is version control system.
+GITHub is web based platform that hosts git repositories
+
+What is repository (repo)?
+A repository is a storage location where GIT tracks files, folders, commits and project history.
+
+What is the diff b/t git pull and git fetch?
+git fetch: Downloads changes but doesn't merge them
+git pull: Downloads and merges changes into the current branch.
+
+Diff b/t git merge and git rebase?
+git merge: Combines branches and creates a merge commit.
+git rebase: Reapplies commits on top of another branch for a cleaner history.
+
+What is commit?
+A commit is a snapshot of changes saved in the Git repository.
+
+How do you check the status of files?
+git status
+
+How do you view commit history?
+git log
+git log --oneline
+
+How do you create a new breanch?
+git branch feature1
+
+How do you switch branches?
+git checkout feature1
+or
+git switch feature1
+
+How do you create and switch to a branch to a branch in one command?
+git checkout -b feature1
+
+How do you delete a branch?
+git branch -d feature1
+
+How do you hadle the merge conflict?
+A merge conflict occurs when Git can not automatically merge changes from different branches.
+
+How do you hadle the merge conflict?
+When a merge conflict occurs first i identify cinficted the file using command "git status". Then i open the
+files, review the conflicting changes and decide which code to keep or how to combine both changes. After resolving
+the conflicts, i stage the files using "git add" and verify the status and complete the merge with "git commit" or
+"git merge" Finally i test the application to ensure the merged code works correctly.
+=================================
+
 what is the diff b/w cetralized and distributed control system?
-what is fork?
+In centralized vesrision control system (CVCS) there is only one central server that store the code. Developers 
+need to connect to the server to get the latest code and save changes.
+In Distribited version control system (DVCS) every developer has a complete copy of the repository on their local 
+machine. They can work and commit changes even without internet access.
+
+what is fork in GIT?
+A fork is personal copy os another users repository in my GITHub account, Allowing me to make changes independently 
+and later submit them through a pull request.
+
 Diff b/w Git and Git hub?
+
 How to create repository from the CLI?
+To create a GIT repository from the command line, I creaet a project directory, move into it and run "git init". This 
+initilizes an empty Git repository. Then i add files, commit them and optionally connect the repository to a remote 
+server usig  "git remote add origin" 
+
 Diff b/w Git fetch and Git pull?
+
 What are pre-commit hooks and post-commit hooks?
+A pre-commit hook runs before a commit and used to validate code or run checks.
+Purpose:- Check code quality, Run tests, Validating formatting and prevent bad commit's
+
+A post-commit hook runs after a successful commit and is used to send notifications, update logs and trigger other 
+automation tasks
+
 What is branch?
+A branch is an independent line of development in Git that allows us to work on changes without impacting the
+main branch until the changes are tested and merged.
+
 What is the flow of Git that we will use in a day commands or life cycle?
+git pull 
+gir status
+git add
+git commit -m "message"
+git push
+
 Diff b/w clone and Fork?
+A clone creates a local copy of a repository on my machine. while a fork creates copy of someone else repository in my 
+GitHub account. Clone is used for local development and fork is commonly used when contributing to external projects.
+
+
 Diff b/w Git merge and Git rebase?
 How do you hadle the merge conflict?
