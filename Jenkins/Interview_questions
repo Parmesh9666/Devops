@@ -1,5 +1,86 @@
 Explain your current CI/CD setup? (This question can be ask in multiple ways)
-How do you handle Secrets?
+In the current project we are using tools like (Maven, Sonar, AppScan, ArgoCD and Kubernetes) to automate code deployement.
+In our current organization we are using GitHub as source code repository when a developer commits the code into the 
+source code repository a jenkins pipeline is automatically trigger and this jenkins pipeline will pulls the code from the
+source code repository. Once the code pulls and checked out the next step would be bulding this code using Maven. Once 
+Maven builds the appliaction next we will verify static code analysis and code quality using Sonar. Using AppScan to perform 
+security scan on the application. After that we try to promot this application onto dve environment using ArgoCD and
+Kubernates.
+
+What are the different ways to trigger jenkins pipelines ?
+There are diffent ways to trigger a Jenkins pipeline:-
+-Pole SCM:- Jenkins automatically starts when code is pushed to trigger.
+-Build Trigger:- A jobs starts sutomatically after another Jenkins job completes succesfully.
+-Webhook Trigger:- GitHub or GitLab sends a webhook to Jenkins when there is code change.
+
+How to backup Jenkins?
+To take the backup Jenkins we need to take a backup of the JENKINS_HOME directory because it contains all Jenkins pipeline
+jobs, Configurations, plugins, User information, credentials and build history.
+
+tar -cvzf jenkins_backup.tar.gz /var/lib/jenkins
+
+How do you store/secure/handle Secrets in jenkins?
+We handle secrets in Jenkins. We store secretes such as passwors, API keys and tokens using the Credentials feature 
+instead of hardcoading them in scripts or pipelines.
+
+What is latest version of Jenkins or which version of Jenkins are you using ?
+I don't remember the exact Jenkins version right now. But we use LTS version in productions. We use 
+regulary upgrade it as part of maintenance and security patching.
+
+What is shared modules in Jenkins ?
+Jenkins shared Libraries are reusable code and resources that can be shared across multiple Jenkins pipelines. Instead of
+writing the same code in every Jenkins file, We keep common functions in a shared library and resue them in diffenrt projects.
+
+can you use Jenkins to build applications with multiple programming languages using different agents in different stages?
+Jenkins supports multiple build agents, which can be used to run build jobs on different platforms and with different 
+configurations. By using different agents in different stages of the build process, you can build applications with 
+multiple programming languages and ensure that the appropriate tools and libraries are available for each language.
+
+For example, you can use one agent for compiling Java code and another agent for building a Node.js application. 
+The agents can be configured to use different operating systems, different versions of programming languages, and 
+different libraries and tools.
+
+Jenkins also provides a wide range of plugins that can be used to support multiple programming languages and build 
+tools, making it easy to integrate different parts of the build process and manage the dependencies required for each stage.
+
+Overall, Jenkins is a flexible and powerful tool that can be used to build applications with multiple programming 
+languages and support different stages of the build process.
+
+How to setup auto-scaling group for Jenkins in AWS?
+Here is a high-level overview of how to set up an autoscaling group for Jenkins in Amazon Web Services (AWS):
+Steps:-
+1. Launch Jenkins master/controller on an EC2 instance
+2. Create an AMI for Jenkins agents with required tools (Java, Maven, Docker, etc)
+3. Create a launch template using the agent AMI.
+4. Create an Auto Sacaling Group (ASG) using the Launch Template.
+5. Configure Jenkins to dynamically provision agents from AWS.
+6. Set sacling policies based on metrics such as CPU utilization or the number of pending builds.
+7. When build demand increases AWS launches more agents. When demand decreases unused agents are terminated.
+
+How to add a new worker node in Jenkins ?
+Log into the Jenkins master and navigate to Manage Jenkins > Manage Nodes > New Node. Enter a name 
+for the new node and select Permanent Agent. Configure SSH and click on Launch.
+
+How to add a new plugin in Jenkins ?
+Using the CLI, java -jar jenkins-cli.jar install-plugin <PLUGIN_NAME>
+
+Using the UI,
+
+Click on the "Manage Jenkins" link in the left-side menu.
+Click on the "Manage Plugins" link.
+
+What is JNLP and why is it used in Jenkins ?
+In Jenkins, JNLP (Java Network Launch Protocol) is used to allow agents (also known as "slave nodes") to be launched 
+and managed remotely by the Jenkins master instance. This allows Jenkins to distribute build tasks to multiple 
+agents, providing scalability and improving performance.
+
+When a Jenkins agent is launched using JNLP, it connects to the Jenkins master and receives build tasks, which 
+it then executes. The results of the build are then sent back to the master and displayed in the Jenkins user interface.
+
+What are some of the common plugins that you use in Jenkins ?
+Most commonly used plugins are:-
+Git, Pipeline, Credentials, Maven, SonarQube, Docker and Kubernates, etc..
+
 What is deployment strategy?
 What would you do if deployed app is faulty?
 Jenkins setup, Bacup and Scaling up?
