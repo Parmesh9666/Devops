@@ -1,0 +1,36 @@
+1. what is docker?
+A. Docker is an open source containarization platform. It enables developers to package applications into containers.
+I used docker to bulid the docker images and then write some docker files and using them to build docker images. once 
+done using docker images to run docker containers and push them to registries.
+
+2. How are containers different from virtual machines? 
+A. Containers are very lightweight in nature bacause they don't have complete operating system but they have minimal 
+system dependencies that are required to run application. 
+But in virtual machines if created an EC2 instance we need application and install Java and need Kernal and system 
+libraries and complete operating system. 
+Ex:- If i'm running a Java application. I need some Java runtime dependency to run the Java application and i just need 
+some system libraries that are mandatory to run application. So, these are the three things are basically defined to have 
+this very lightweight nature.
+
+3. what is the docker lifecycle? 
+A. In my case what i usally do is I start writing a Docker file with the set of instructions that are required to run
+the application. And once i feel the docker file is complete I will create Docker image using the docker CLI the command
+is Docker build which essentially convert Docker file to Docker image. After that using Docker run command to execute 
+container. And finally once container created push them to external registries like Docker Hub or quay.io.
+
+4. what are the different docker components? 
+A. The main Docker components are Docker Engine, Docker Client, Docker Daemon, Images, Containers, Registries, 
+Dockerfiles, Volumes, and Networks, which together help build, store, deploy, and manage containerized applications.
+
+5. what is the difference between docker COPY and docker ADD? 
+A. Docker ADD can copy the files from a URL unlike Docker COPY which can COPY files from host system into the container.
+
+6. what is the difference between CMD and ENTRYPOINT? 
+A. 
+
+7.	what are the networking types in docker and what is the default? 
+8.	can you explain how to isolate networking between containers? 
+9.	what is a multistage build in docker? 
+10.	what are distro-less images In docker?
+11.	 real-time challenges faced with docker? 
+12.	what steps would you take to secure the container?
