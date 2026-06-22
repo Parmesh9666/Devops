@@ -26,11 +26,44 @@ Dockerfiles, Volumes, and Networks, which together help build, store, deploy, an
 A. Docker ADD can copy the files from a URL unlike Docker COPY which can COPY files from host system into the container.
 
 6. what is the difference between CMD and ENTRYPOINT? 
+A. CLI arguments using the Docker run command will override the aruguments specified using the CMD instruction.
+
+Where as ENTRYPOINT instruction in the shell form will override additional arguments provided using CLI parameters or 
+even through the CMD commands.
+
+7. what are the networking types in docker and what is the default? 
+A. The defulat networking in Docker is Bridge.
+Below are different types of networking and we can change default type.
+Bridge, Overlay, Host and MacVlan
+
+8. can you explain how to isolate networking between containers? 
 A. 
 
-7.	what are the networking types in docker and what is the default? 
-8.	can you explain how to isolate networking between containers? 
-9.	what is a multistage build in docker? 
+9. what is a multistage build in docker? 
+A. Multistage build allows you to build your docker container in multiple statges allowing to copy artificats from one
+stage to other. the major advantage of this is to build light weight containers.
+
 10.	what are distro-less images In docker?
-11.	 real-time challenges faced with docker? 
+A. Distroless images contain only your application and it's runtime dependencies with a very minimum operating system
+libraries. They do not contain package managers, shell or any other programs you would expect to find in standard Linux 
+distribution. They are very small and lightweight images.
+
+11.	real-time challenges faced with docker? 
+A. - Docker is a single Daemon process. Which can cause a single point of failure, If the docker Daemon goes down for
+some reason all the applications are down.
+
+-Docker Daemon runs as root user. Which is security threat. Any processing running as a root can have adverse
+effect. When it is comprised for security reasons, it can impact other applications or container on the host.
+
+-Resource containers: If you are running too many containers on a single host, you may experience issues with resource
+constraints.  This can result in slow performance or crashes.
+
 12.	what steps would you take to secure the container?
+A. Some of the steps are:-
+i) Use Distroless or images with not too many packages as your final image in multi stage build, So that there is
+less chance of CVE or security issues.
+
+ii) Ensure that the networking is configured properly. This is one of the most common reasons for security issues.
+If required configure custom bridge networks and assigns them to isolate containers.
+
+iii) Use utilities like sync to scan your container images.
