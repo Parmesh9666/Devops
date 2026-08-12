@@ -1,0 +1,35 @@
+Containers --> Introduction, Docker Buildah
+Containers are advanced to Virtual machines
+If we have one physical server on top of it we can inception Hypervisior uses virtualization 
+Containers are very light weight why because they do not have complete operating system. They are having minimal operating 
+system or base image
+
+Containers is like a package and it contains Application, Libraries and System dep etc...
+
+How container will create 
+First write a docker file  and execute it to get image and execute docker image to create container
+
+Docker always depends on docker engine and this docker engine is basiacally a single point of failure.
+If any case docker engine went down due to some reason then all docker containers will stop working
+
+Containers have their base operating system or they have minimum system dependencies
+
+Containers has some system files and folders like
+/bin, /sbin, /etc, /lib, /usr, /var, /root
+
+What is docker?
+Containerization is a concept or technology and docker implements containerization
+
+Docker file is contain set of instructions for creating base image
+
+Dacker file --> docker build
+Docker image --> docker run
+This two will create container
+
+
+Docker file
+FROM ubuntu:24.04
+
+COPY test.txt /app/test.txt
+
+CMD ["bash"]
