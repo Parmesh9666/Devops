@@ -5,3 +5,6 @@ CMD and entrypoint
 
 Add and Copy
 
+Docker system prune
+Docker inspect
+docker buildx
