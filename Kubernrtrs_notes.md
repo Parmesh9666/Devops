@@ -55,4 +55,26 @@ Kubernetes offering us to solve 4 different problems.
 4. Enterprise level
 
 There are multiple components in Kubernetes.
+
 <img width="392" height="235" alt="image" src="https://github.com/user-attachments/assets/e47a6089-9005-4d39-b536-af5afcce2bb4" />
+
+
+When a user deploy pod into worker node we have a component in Kubernetes that is called as kubelet.
+Here Kubelet is responsible for running a pod. Kubelet is ensuring that the pod is always running. 
+In kubernetes we have pods has a container runtime.
+In Kubernetes we have Kube-proxy and this kube-proxy basically provides networking. Every pod containing IP address and it has to providing load balancing capabilities.
+
+There are mainly 3 components in data plane. They are
+1. Kube-Proxy --> It is responsible for networking like generating IP address and load balancing 
+2. Kubelet --> Responsible for creation of pods and it will ensure pods always in running state.
+3. Container run time --> It is responsible for running container.
+
+Master Node:
+============
+
+In Master node we have different components.
+1. API server --> It will receive every request from external world
+2. Scheduler --> It will take the decision to schedule the pods in node1 or node2...
+3. ETCD --> It will store the all information of the cluster
+4. Controller Manger --> It will ensure to managing inbuilt controllers
+5. Cloud Controller Manger(CCM) --> 
