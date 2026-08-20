@@ -43,3 +43,16 @@ In Kubernetes there will be API server this rollout new container when a contain
 
 Enterprise level
 In Kubernetes we use enterprise level container orchestration platform
+
+=============================================================================
+
+K8s Architecture
+
+Kubernetes offering us to solve 4 different problems.
+1. Cluster level
+2. Auto healing
+3. Auto scaling
+4. Enterprise level
+
+There are multiple components in Kubernetes.
+<img width="392" height="235" alt="image" src="https://github.com/user-attachments/assets/e47a6089-9005-4d39-b536-af5afcce2bb4" />
