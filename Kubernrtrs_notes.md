@@ -78,3 +78,11 @@ In Master node we have different components.
 3. ETCD --> It will store the all information of the cluster
 4. Controller Manger --> It will ensure to managing inbuilt controllers
 5. Cloud Controller Manger(CCM) --> 
+
+==================================================================
+
+How devops engineer manage 100's of clusters in production
+
+Currently most using tool is **KOPS** 
+KOPS means Kubernetes operations. KOPS is mainly managed by life cycle of Kubernetes such as Install, Upgradation, Modification and Deletion of cluster.
+
